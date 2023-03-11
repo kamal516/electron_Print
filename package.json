@@ -1,0 +1,42 @@
+{
+  "name": "Protocol-Printing(win)",
+  "version": "0.0.1",
+  "description": "A minimal Electron application with  custom protocol printing",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/oikonomopo/electron-deep-linking-osx",
+  "keywords": [
+    "Electron",
+    "macOS",
+    "win32",
+    "deep linking"
+  ],
+  "author": "abhay",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^18.3.15",
+    "electron-builder": "^21.2.0"
+  },
+  "build": {
+    "appId": "Protocol-printing for windows",
+    "protocols": {
+      "name": "Protocol-Printing",
+      "schemes": [
+        "Protocol-Printing"
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.Reference"
+    },
+    "win": {}
+  },
+  "dependencies": {
+    "escpos": "^3.0.0-alpha.6",
+    "escpos-network": "^3.0.0-alpha.5",
+    "replace": "^1.2.1"
+  }
+}
